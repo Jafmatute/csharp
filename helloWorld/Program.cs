@@ -7,7 +7,7 @@ namespace helloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            TypeConversion();
+            Operators();
         }
 
         static void Variables()
@@ -62,6 +62,17 @@ namespace helloWorld
             bool bs = Convert.ToBoolean(str);
             Console.WriteLine(bs);
 
+
+        }
+        static void Operators()
+        {
+            var a = 1;
+            var b = 2;
+            var c = 3;
+
+            Console.WriteLine((float)a/(float)b);
+            Console.WriteLine(  c> b && c>a);
+            Console.WriteLine(c > b || c == a);
 
         }
     }
