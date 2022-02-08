@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace primitivesTypes
+namespace csharpFundamentals
 {
-    public class PrimitivesTypes 
+    public class PrimitivesTypes
     {
-        
+
         public void Variables()
         {
             byte number = 1;
@@ -65,7 +65,7 @@ namespace primitivesTypes
             var b = 2;
             var c = 3;
 
-            Console.WriteLine((float)a / (float)b);
+            Console.WriteLine(a / (float)b);
             Console.WriteLine(c > b && c > a);
             Console.WriteLine(c > b || c == a);
 
