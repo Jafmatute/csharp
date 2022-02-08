@@ -8,5 +8,11 @@ namespace csharpFundamentals.Math
         {
             return a + b;
         }
+
+        public void Render()
+        {
+            int cal = Add(1, 2);
+            Console.WriteLine(cal);
+        }
     }
 }

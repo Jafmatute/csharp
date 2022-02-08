@@ -17,9 +17,14 @@ namespace csharpFundamentals
             person.LastName = "Flores";
             person.Introduce();
                 
-            Calculator calculator = new Calculator();
-            int cal = calculator.Add(1, 2);
-            Console.WriteLine(cal);
+            //Calculator calculator = new Calculator();
+            //calculator.Render();
+
+            //Array
+            var nonPrimitivies = new Non_PrimitiveTypes();
+            //nonPrimitivies.DemoArrays();
+            nonPrimitivies.DemoStrings();
+
 
         }
 
