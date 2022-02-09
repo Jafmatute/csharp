@@ -28,6 +28,18 @@ namespace csharpFundamentals
             //Enums
             nonPrimitivies.DemoShippingMethod();
 
+            //References Type Value Structs
+            nonPrimitivies.DemoReferencesTypeValue();
+
+            var number = 1;
+            nonPrimitivies.Increment(number);
+            Console.WriteLine(number);
+
+            var person = new Person() { Age=20 };
+             nonPrimitivies.MakeOld(person);
+            Console.WriteLine(person.Age);
+
+
 
         }
 
