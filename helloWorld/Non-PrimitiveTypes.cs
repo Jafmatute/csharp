@@ -2,6 +2,14 @@
 
 namespace csharpFundamentals
 {
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisterAirMail = 2,
+        Express = 3,
+    }
+
+
     public class Non_PrimitiveTypes
     {
         public void DemoArrays()
@@ -49,8 +57,33 @@ c:\folder3\folder4";
 
 
         }
+
+        public void DemoClass()
+        {
+            var person = new Person();
+            person.FirstName = "Josue";
+            person.LastName = "Flores";
+            person.Introduce();
+
+        }
+        public void DemoShippingMethod()
+        {
+            var method = ShippingMethod.Express;
+            Console.WriteLine((int)method);
+
+            //obtener de otro sitio el valor
+            var methodId = 13;
+            Console.WriteLine((int)(ShippingMethod)methodId);
+
+            Console.WriteLine(method.ToString());
+
+           var  methodName = "Express";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+            Console.WriteLine(shippingMethod);
+        }
     }
 
+  
     public class Person
     {
         public string FirstName;

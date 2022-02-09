@@ -11,19 +11,22 @@ namespace csharpFundamentals
             //PrimitivesTypes primitives = new PrimitivesTypes();
             //primitives.Operators();
 
+            var nonPrimitivies = new Non_PrimitiveTypes();
+
+
             //NoPrimitiveTypes
-            var person = new Person();
-            person.FirstName = "Josue";
-            person.LastName = "Flores";
-            person.Introduce();
-                
+            nonPrimitivies.DemoClass();
+
             //Calculator calculator = new Calculator();
             //calculator.Render();
 
             //Array
-            var nonPrimitivies = new Non_PrimitiveTypes();
+
             //nonPrimitivies.DemoArrays();
             nonPrimitivies.DemoStrings();
+
+            //Enums
+            nonPrimitivies.DemoShippingMethod();
 
 
         }
