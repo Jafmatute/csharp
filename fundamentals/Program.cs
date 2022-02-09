@@ -8,8 +8,17 @@ namespace csharpFundamentals
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //PrimitivesTypes primitives = new PrimitivesTypes();
-            //primitives.Operators();
+           
+        }
+
+        static void DemoPrimitiveTypes()
+        {
+            //Primitive Types
+            PrimitivesTypes primitives = new PrimitivesTypes();
+            primitives.Operators();
+        }
+        static void DemoNon_PrimitiveTypes()
+        {
 
             var nonPrimitivies = new Non_PrimitiveTypes();
 
@@ -17,8 +26,8 @@ namespace csharpFundamentals
             //NoPrimitiveTypes
             nonPrimitivies.DemoClass();
 
-            //Calculator calculator = new Calculator();
-            //calculator.Render();
+            Calculator calculator = new Calculator();
+            calculator.Render();
 
             //Array
 
@@ -35,11 +44,9 @@ namespace csharpFundamentals
             nonPrimitivies.Increment(number);
             Console.WriteLine(number);
 
-            var person = new Person() { Age=20 };
-             nonPrimitivies.MakeOld(person);
+            var person = new Person() { Age = 20 };
+            nonPrimitivies.MakeOld(person);
             Console.WriteLine(person.Age);
-
-
 
         }
 
