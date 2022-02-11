@@ -1,4 +1,4 @@
-﻿namespace csharpFundamentals.Class
+﻿namespace csharpFundamentals.Class.ControlFlow
 {
     public enum Season
     {
