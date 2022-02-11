@@ -1,4 +1,5 @@
 ﻿using csharpFundamentals.Math;
+using csharpFundamentals.Class;
 using System;
 
 namespace csharpFundamentals
@@ -8,7 +9,7 @@ namespace csharpFundamentals
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-           
+            DemoControlFlow();
         }
 
         static void DemoPrimitiveTypes()
@@ -50,6 +51,11 @@ namespace csharpFundamentals
 
         }
 
+        static void DemoControlFlow()
+        {
+            ControlFlow controlFlow = new ControlFlow();
+            controlFlow.Sentences();
+        }
 
     }
 }
