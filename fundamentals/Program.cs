@@ -58,8 +58,14 @@ namespace csharpFundamentals
             ControlFlow controlFlow = new ControlFlow();
             //controlFlow.Sentences();
 
+            //Loops, for, foreach, while
             Loops loops = new Loops();
-            loops.IterationWhileLoop();
+            //loops.IterationWhileLoop();
+
+            //random values
+            RandomClass random = new RandomClass();
+            random.RandomValues();
+
         }
 
         static void Exercises()
