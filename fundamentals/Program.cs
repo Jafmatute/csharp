@@ -3,6 +3,7 @@ using csharpFundamentals.Class.ControlFlow;
 using csharpFundamentals.Class.ArraysAndLists;
 using csharpFundamentals.Class.Exercises;
 using System;
+using System.Collections.Generic;
 
 namespace csharpFundamentals
 {
@@ -73,7 +74,10 @@ namespace csharpFundamentals
         {
             Arrays array = new Arrays();
 
-            array.Array_();
+            Lists lists = new Lists();
+
+            //array.Array_();
+            lists.List();
         }
 
         static void Exercises()
