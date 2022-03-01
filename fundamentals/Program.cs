@@ -1,5 +1,6 @@
 ﻿using csharpFundamentals.Math;
 using csharpFundamentals.Class.ControlFlow;
+using csharpFundamentals.Class.ArraysAndLists;
 using csharpFundamentals.Class.Exercises;
 using System;
 
@@ -10,7 +11,7 @@ namespace csharpFundamentals
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            DemoControlFlow();
+            DemoArraysAndList();
             
         }
 
@@ -66,6 +67,13 @@ namespace csharpFundamentals
             RandomClass random = new RandomClass();
             random.RandomValues();
 
+        }
+
+        static void DemoArraysAndList()
+        {
+            Arrays array = new Arrays();
+
+            array.Array_();
         }
 
         static void Exercises()
