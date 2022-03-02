@@ -3,7 +3,6 @@ using csharpFundamentals.Class.ControlFlow;
 using csharpFundamentals.Class.ArraysAndLists;
 using csharpFundamentals.Class.Exercises;
 using System;
-using System.Collections.Generic;
 
 namespace csharpFundamentals
 {
@@ -12,7 +11,7 @@ namespace csharpFundamentals
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            DemoArraysAndList();
+            Exercises2();
             
         }
 
@@ -86,5 +85,10 @@ namespace csharpFundamentals
             exercises.Exercise4();
         }
 
+        static void Exercises2()
+        {
+            CSharp2Exercises exercises = new CSharp2Exercises();
+            exercises.Excercise5();
+        }
     }
 }
