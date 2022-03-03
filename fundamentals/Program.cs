@@ -1,6 +1,7 @@
 ﻿using csharpFundamentals.Math;
 using csharpFundamentals.Class.ControlFlow;
 using csharpFundamentals.Class.ArraysAndLists;
+using csharpFundamentals.Class.Dates;
 using csharpFundamentals.Class.Exercises;
 using System;
 
@@ -11,7 +12,7 @@ namespace csharpFundamentals
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Exercises2();
+            DemoDate();
             
         }
 
@@ -77,6 +78,12 @@ namespace csharpFundamentals
 
             //array.Array_();
             lists.List();
+        }
+
+        static void DemoDate()
+        {
+           DatesTime dateTime = new DatesTime();
+           dateTime.DateTimes();
         }
 
         static void Exercises()
