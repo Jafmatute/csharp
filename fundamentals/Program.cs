@@ -83,7 +83,7 @@ namespace csharpFundamentals
         static void DemoDate()
         {
            DatesTime dateTime = new DatesTime();
-           dateTime.DateTimes();
+           dateTime.TimeSpans();
         }
 
         static void Exercises()
