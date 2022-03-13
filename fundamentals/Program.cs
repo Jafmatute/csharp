@@ -2,6 +2,7 @@
 using csharpFundamentals.Class.ControlFlow;
 using csharpFundamentals.Class.ArraysAndLists;
 using csharpFundamentals.Class.Dates;
+using csharpFundamentals.Class.Text;
 using csharpFundamentals.Class.Exercises;
 using System;
 
@@ -12,7 +13,7 @@ namespace csharpFundamentals
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            DemoDate();
+            DemoTexts();
             
         }
 
@@ -84,6 +85,12 @@ namespace csharpFundamentals
         {
            DatesTime dateTime = new DatesTime();
            dateTime.TimeSpans();
+        }
+
+        static void DemoTexts()
+        {
+            Strings str = new Strings();
+            str.Strings_();
         }
 
         static void Exercises()
