@@ -90,7 +90,10 @@ namespace csharpFundamentals
         static void DemoTexts()
         {
             Strings str = new Strings();
-            str.Strings_();
+            //str.Strings_();
+
+            LiveCodingSummarisingText summary = new LiveCodingSummarisingText();
+            summary.SummaryText();
         }
 
         static void Exercises()

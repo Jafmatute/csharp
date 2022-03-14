@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace csharpFundamentals.Class.Text
 {
@@ -16,7 +14,7 @@ namespace csharpFundamentals.Class.Text
             Console.WriteLine( "ToUpper: {0}", fullName.ToUpper());
             Console.WriteLine( "ToLower: {0}", fullName.ToLower());
 
-            //Search, Substract
+            //Search, Subtract
             var index = fullName.IndexOf(' ');
             string firstName = fullName.Substring(0,index);
             string lastName = fullName.Substring(index + 1);
