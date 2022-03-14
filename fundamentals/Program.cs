@@ -93,7 +93,12 @@ namespace csharpFundamentals
             //str.Strings_();
 
             LiveCodingSummarisingText summary = new LiveCodingSummarisingText();
-            summary.SummaryText();
+            //summary.SummaryText();
+
+            StringBuilderText builder = new StringBuilderText();
+            builder.Builder();
+
+
         }
 
         static void Exercises()
