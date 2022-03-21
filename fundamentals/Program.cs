@@ -3,6 +3,7 @@ using csharpFundamentals.Class.ControlFlow;
 using csharpFundamentals.Class.ArraysAndLists;
 using csharpFundamentals.Class.Dates;
 using csharpFundamentals.Class.Text;
+using  csharpFundamentals.Class.Files;
 using csharpFundamentals.Class.Exercises;
 using System;
 
@@ -13,8 +14,8 @@ namespace csharpFundamentals
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            DemoTexts();
-            
+           
+            DemoFiles();
         }
 
         static void DemoPrimitiveTypes()
@@ -101,6 +102,14 @@ namespace csharpFundamentals
 
         }
 
+        static void DemoFiles()
+        {
+            Path path = new Path();
+
+            path.Path_();
+
+            
+        }
         static void Exercises()
         {
             CSharp1Exercises exercises = new CSharp1Exercises();
