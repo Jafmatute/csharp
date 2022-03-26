@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using CSharpIntermediate.Classes;
 
 namespace CSharpIntermediate
@@ -10,8 +11,14 @@ namespace CSharpIntermediate
         static void Main()
         {
          
-           var person = Person.Parse("Josue");
-           person.Introduce("Flores");
+          var customer = new Customer();
+          customer.Id = 1;
+          customer.Name = "Josue";
+
+          var order = new Order();
+          customer.Orders.Add(order);
+          Console.WriteLine(customer.Id);
+          Console.WriteLine(customer.Name);
         }
     }
 }
