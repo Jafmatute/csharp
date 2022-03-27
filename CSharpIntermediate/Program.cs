@@ -11,11 +11,10 @@ namespace CSharpIntermediate
         static void Main()
         {
             
-         var person = new Person();
+         var person = new Person(new DateTime(1992, 9, 6));
+            
+            Console.WriteLine(person.Age);
 
-         person.SetBirthdate(new DateTime(1992, 9, 2));
-
-         Console.WriteLine(person.GetBirthdate());
         }
 
         static void UsePoint()
