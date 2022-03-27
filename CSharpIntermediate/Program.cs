@@ -10,12 +10,12 @@ namespace CSharpIntermediate
     {
         static void Main()
         {
-            var customer = new Customer2(1);
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
-            customer.Promote();
-            Console.WriteLine(customer.Orders.Count);
-         
+            
+         var person = new Person();
+
+         person.SetBirthdate(new DateTime(1992, 9, 2));
+
+         Console.WriteLine(person.GetBirthdate());
         }
 
         static void UsePoint()
@@ -64,6 +64,15 @@ namespace CSharpIntermediate
             var result = int.TryParse("abc", out number);
             if(result) Console.WriteLine(number);
             else Console.WriteLine("Conversion failed");
+        }
+
+        static void UseFields()
+        {
+            var customer = new Customer2(1);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
+            customer.Promote();
+            Console.WriteLine(customer.Orders.Count);
         }
     }
 }

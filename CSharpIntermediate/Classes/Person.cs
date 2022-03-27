@@ -5,6 +5,7 @@ namespace CSharpIntermediate.Classes
     public class Person
     {
         public string Name;
+        private DateTime _birthdate;
 
         public void Introduce(string to)
         {
@@ -19,6 +20,16 @@ namespace CSharpIntermediate.Classes
             };
 
             return person;
+        }
+
+        public void SetBirthdate(DateTime birthdate)
+        {
+            this._birthdate = birthdate;
+        }
+
+        public  DateTime GetBirthdate()
+        {
+            return this._birthdate;
         }
     }
 }
