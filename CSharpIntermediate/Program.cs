@@ -11,10 +11,9 @@ namespace CSharpIntermediate
         static void Main()
         {
             
-         var person = new Person(new DateTime(1992, 9, 6));
-            
-            Console.WriteLine(person.Age);
-
+          var cookie = new HttpCookie();
+          cookie["name"] = "Josue";
+          Console.WriteLine(cookie["name"]);
         }
 
         static void UsePoint()
@@ -72,6 +71,13 @@ namespace CSharpIntermediate
             customer.Orders.Add(new Order());
             customer.Promote();
             Console.WriteLine(customer.Orders.Count);
+        }
+
+        static void UsePerson()
+        {
+            var person = new Person(new DateTime(1992, 9, 6));
+
+            Console.WriteLine(person.Age);
         }
     }
 }
