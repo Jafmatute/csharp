@@ -1,4 +1,5 @@
 ﻿using System;
+using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
 using CSharpIntermediate.Exercises;
 
@@ -8,7 +9,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-            UseExercisePosts();
+           UseInheritance();
         }
 
      
@@ -101,7 +102,8 @@ namespace CSharpIntermediate
 
         }
 
-        private static void UseExercisePosts()
+        
+        /*private static void UseExercisePosts()
         {
 
             while (true)
@@ -118,6 +120,16 @@ namespace CSharpIntermediate
             }
             
 
+        }*/
+
+
+        // Association between Classes
+
+        private static void UseInheritance()
+        {
+            var text = new Text();
+            text.Width = 100;
+            text.Copy();
         }
     }
 }
