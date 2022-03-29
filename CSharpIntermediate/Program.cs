@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Globalization;
 using CSharpIntermediate.Classes;
+using CSharpIntermediate.Exercises;
 
 namespace CSharpIntermediate
 {
-
-    
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
-            
-          var cookie = new HttpCookie();
-          cookie["name"] = "Josue";
-          Console.WriteLine(cookie["name"]);
+            UseExercisePosts();
         }
 
-        static void UsePoint()
+     
+
+        private static void UsePoint()
         {
             try
             {
@@ -27,23 +24,15 @@ namespace CSharpIntermediate
                 point.Move(100, 200);
                 Console.WriteLine("Point is at ({0}, {1})", point.X, point.Y);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine("an unexpected error ocurred", e);
+                Console.WriteLine("an unexpected error ocurred");
                 
             }
         }
 
-        static void UseParams()
-        {
-            var calculator = new Calculator();
 
-            Console.WriteLine(calculator.Add(1, 2, 3));
-            Console.WriteLine(calculator.Add(1));
-            Console.WriteLine(calculator.Add(new int[] { 1, 2, 4 }));
-        }
-
-        static void TryParse()
+        private static void TryParse()
         {
             // method 1
 
@@ -64,7 +53,8 @@ namespace CSharpIntermediate
             else Console.WriteLine("Conversion failed");
         }
 
-        static void UseFields()
+
+        private static void UseFields()
         {
             var customer = new Customer2(1);
             customer.Orders.Add(new Order());
@@ -73,11 +63,61 @@ namespace CSharpIntermediate
             Console.WriteLine(customer.Orders.Count);
         }
 
-        static void UsePerson()
+        private static void UsePerson()
         {
             var person = new Person(new DateTime(1992, 9, 6));
 
             Console.WriteLine(person.Age);
+        }
+
+        private static void UseCookie()
+        {
+            var cookie = new HttpCookie();
+            cookie["name"] = "Josue";
+            Console.WriteLine(cookie["name"]);
+        }
+
+        private static void UseExerciseStopWatch()
+        {
+            
+            var stopwatch = new Stopwatch();
+            Console.WriteLine("Stopwatch");
+            stopwatch.Start();
+            
+
+            while (true)
+            {
+                var input = Console.ReadLine();
+                if (String.IsNullOrWhiteSpace(input))
+                {
+                    stopwatch.Stop();
+                    var durationStopwatch = stopwatch.GetIntervaSpan();
+                    Console.WriteLine("Duration: {0}", durationStopwatch.ToString("mm\\:ss\\.ff"));
+
+                    Console.WriteLine("Press Enter to run the stopwatch one more line");
+                    
+                }
+            }
+
+        }
+
+        private static void UseExercisePosts()
+        {
+
+            while (true)
+            {
+                var post = new Post();
+
+                Console.WriteLine("Title");
+                string title = Console.ReadLine().Trim();
+                Console.WriteLine("Description");
+                string description = Console.ReadLine().Trim();
+            
+
+                post.Create(title, description);
+            }
+            
+
         }
     }
 }
