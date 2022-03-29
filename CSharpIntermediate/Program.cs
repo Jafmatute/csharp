@@ -9,7 +9,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-           UseInheritance();
+           UseComposition();
         }
 
      
@@ -130,6 +130,15 @@ namespace CSharpIntermediate
             var text = new Text();
             text.Width = 100;
             text.Copy();
+        }
+
+        private static void UseComposition()
+        {
+            var dbMigrator = new DbMigrator(new Logger());
+            var logger = new Logger();
+            var installer = new Installer(logger);
+            dbMigrator.Migrate();
+            installer.Install();
         }
     }
 }
