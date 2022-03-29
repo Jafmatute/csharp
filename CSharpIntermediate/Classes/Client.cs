@@ -2,22 +2,22 @@
 
 namespace CSharpIntermediate.Classes
 {
-    public class Customer
+    public class Client
     {
         public int Id;
         public string Name;
         public List<Order> Orders;
 
-        public Customer()
+        public Client()
         {
             Orders = new List<Order>();
         }
-        public Customer(int id):this() 
+        public Client(int id):this() 
         {
             this.Id = id;
         }
 
-        public Customer(int id, string name):this(id)
+        public Client(int id, string name):this(id)
         {
             
             this.Name = name;

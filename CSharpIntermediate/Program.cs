@@ -1,4 +1,5 @@
 ﻿using System;
+using Amazon;
 using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
 using CSharpIntermediate.Exercises;
@@ -139,6 +140,16 @@ namespace CSharpIntermediate
             var installer = new Installer(logger);
             dbMigrator.Migrate();
             installer.Install();
+        }
+
+        private static void UseAccessModifiers()
+        {
+            var customer = new Customer();
+
+            //Internal
+            //Amazon.RateCalculator calculate = new RateCalculator();
+            
+
         }
     }
 }
