@@ -16,7 +16,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-           UseExerciseStack();
+           UseAbstractClassesMembers();
         }
 
      
@@ -247,6 +247,16 @@ namespace CSharpIntermediate
             var canvas = new Canvas();
             canvas.DrawShapes(shapes);
 
+        }
+
+        private static void UseAbstractClassesMembers()
+        {
+
+            var circle = new Circle();
+            circle.Draw();
+
+            var rectangle = new Rectangle();
+            rectangle.Draw();
         }
     }
 }
