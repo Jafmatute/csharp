@@ -14,7 +14,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-           UseUpcastingDowncasting();
+           UseExerciseStack();
         }
 
      
@@ -198,6 +198,35 @@ namespace CSharpIntermediate
 
 
 
+
+        }
+
+        private static void UseExerciseStack()
+        {
+
+            try
+            {
+                var stack = new Exercises.Stack();
+
+                int min = 1;
+                int max = 5;
+
+                for (int i = min; i <= max; i++) stack.Push(i);
+
+                //stack.Clear();
+
+                for (int i = min; i <= max; i++) Console.WriteLine(stack.Pop());
+
+                Console.ReadLine();
+               
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                
+            }
+        
 
         }
     }
