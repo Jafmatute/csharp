@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace CSharpIntermediate.InheritanceSecondPillarOfOOP
+
 {
     class Card : Vehicle
     {

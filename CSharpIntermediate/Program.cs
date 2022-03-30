@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Amazon;
 using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
@@ -11,7 +12,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-           UseConstructorsInheritance();
+           UseUpcastingDowncasting();
         }
 
      
@@ -143,6 +144,8 @@ namespace CSharpIntermediate
             installer.Install();
         }
 
+
+        //Inheritance - Second Pillar of OOP
         private static void UseAccessModifiers()
         {
             var customer = new Customer();
@@ -156,6 +159,27 @@ namespace CSharpIntermediate
         private static void UseConstructorsInheritance()
         {
             var car = new Card("xyz");
+        }
+
+        private static void UseUpcastingDowncasting()
+        {
+            //Up Casting
+
+            TextShape text = new TextShape();
+            Shape shape = text;
+            
+            text.Width = 200;
+            shape.Width = 100;
+            
+            Console.WriteLine(text.Width);
+
+            //Down Casting
+            Shape shape2 = new TextShape();
+            TextShape text2 = (TextShape) shape;
+
+
+
+
         }
     }
 }
