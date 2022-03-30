@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using Amazon;
 using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
 using CSharpIntermediate.Exercises;
 using CSharpIntermediate.InheritanceSecondPillarOfOOP;
+using CSharpIntermediate.PolymorphismThirdPillarOfOOP;
+using Shape = CSharpIntermediate.InheritanceSecondPillarOfOOP.Shape;
+
 
 namespace CSharpIntermediate
 {
@@ -227,6 +229,23 @@ namespace CSharpIntermediate
                 
             }
         
+
+        }
+
+        //Polymorphism Third Pillar of OOP
+
+        private static void UseMethodOverriding()
+        {
+            var shapes = new List<PolymorphismThirdPillarOfOOP.Shape> ();
+
+            /*shapes.Add(new PolymorphismThirdPillarOfOOP.Shape {Width = 100, Height = 100, Type=ShapeType.Circle});
+            shapes.Add(new PolymorphismThirdPillarOfOOP.Shape {Width = 100, Height = 30, Type=ShapeType.Rectangle});*/
+
+            shapes.Add(new Circle());
+            shapes.Add(new Rectangle());
+
+            var canvas = new Canvas();
+            canvas.DrawShapes(shapes);
 
         }
     }
