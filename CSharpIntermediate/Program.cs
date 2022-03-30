@@ -3,6 +3,7 @@ using Amazon;
 using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
 using CSharpIntermediate.Exercises;
+using CSharpIntermediate.InheritanceSecondPillarOfOOP;
 
 namespace CSharpIntermediate
 {
@@ -10,7 +11,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-           UseComposition();
+           UseConstructorsInheritance();
         }
 
      
@@ -150,6 +151,11 @@ namespace CSharpIntermediate
             //Amazon.RateCalculator calculate = new RateCalculator();
             
 
+        }
+
+        private static void UseConstructorsInheritance()
+        {
+            var car = new Card("xyz");
         }
     }
 }
