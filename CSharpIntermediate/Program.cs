@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using Amazon;
 using CSharpIntermediate.AssociationBetweenClasses;
@@ -176,6 +178,23 @@ namespace CSharpIntermediate
             //Down Casting
             Shape shape2 = new TextShape();
             TextShape text2 = (TextShape) shape;
+
+
+
+
+        }
+
+        private static void UseBoxingUnboxing()
+        {
+            var list = new ArrayList();
+            list.Add(1);
+            list.Add("Josue");
+            list.Add(DateTime.Today);
+
+            var anotherList = new List<int>();
+            var names = new List<string>();
+            names.Add("ha");
+
 
 
 
