@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Amazon;
+﻿using Amazon;
 using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
-using CSharpIntermediate.Exercises;
 using CSharpIntermediate.InheritanceSecondPillarOfOOP;
 using CSharpIntermediate.PolymorphismThirdPillarOfOOP;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using Shape = CSharpIntermediate.InheritanceSecondPillarOfOOP.Shape;
-
+using Stack = CSharpIntermediate.InheritanceSecondPillarOfOOP.Exercises.Stack;
 
 namespace CSharpIntermediate
 {
     internal class Program
+
     {
         private static void Main()
         {
-           UseAbstractClassesMembers();
+            UseAbstractClassesMembers();
         }
-
-     
 
         private static void UsePoint()
         {
@@ -35,7 +33,7 @@ namespace CSharpIntermediate
             catch (Exception)
             {
                 Console.WriteLine("an unexpected error ocurred");
-                
+
             }
         }
 
@@ -52,12 +50,12 @@ namespace CSharpIntermediate
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                
+
             }
             //method 2
             int number;
             var result = int.TryParse("abc", out number);
-            if(result) Console.WriteLine(number);
+            if (result) Console.WriteLine(number);
             else Console.WriteLine("Conversion failed");
         }
 
@@ -87,11 +85,11 @@ namespace CSharpIntermediate
 
         private static void UseExerciseStopWatch()
         {
-            
-            var stopwatch = new Stopwatch();
+
+            var stopwatch = new Exercises.Stopwatch();
             Console.WriteLine("Stopwatch");
             stopwatch.Start();
-            
+
 
             while (true)
             {
@@ -103,13 +101,13 @@ namespace CSharpIntermediate
                     Console.WriteLine("Duration: {0}", durationStopwatch.ToString("mm\\:ss\\.ff"));
 
                     Console.WriteLine("Press Enter to run the stopwatch one more line");
-                    
+
                 }
             }
 
         }
 
-        
+
         /*private static void UseExercisePosts()
         {
 
@@ -156,7 +154,7 @@ namespace CSharpIntermediate
 
             //Internal
             //Amazon.RateCalculator calculate = new RateCalculator();
-            
+
 
         }
 
@@ -171,15 +169,15 @@ namespace CSharpIntermediate
 
             TextShape text = new TextShape();
             Shape shape = text;
-            
+
             text.Width = 200;
             shape.Width = 100;
-            
+
             Console.WriteLine(text.Width);
 
             //Down Casting
             Shape shape2 = new TextShape();
-            TextShape text2 = (TextShape) shape;
+            TextShape text2 = (TextShape)shape;
 
 
 
@@ -208,7 +206,7 @@ namespace CSharpIntermediate
 
             try
             {
-                var stack = new Exercises.Stack();
+                var stack = new Stack();
 
                 int min = 1;
                 int max = 5;
@@ -220,15 +218,15 @@ namespace CSharpIntermediate
                 for (int i = min; i <= max; i++) Console.WriteLine(stack.Pop());
 
                 Console.ReadLine();
-               
+
 
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                
+
             }
-        
+
 
         }
 
@@ -236,7 +234,7 @@ namespace CSharpIntermediate
 
         private static void UseMethodOverriding()
         {
-            var shapes = new List<PolymorphismThirdPillarOfOOP.Shape> ();
+            var shapes = new List<PolymorphismThirdPillarOfOOP.Shape>();
 
             /*shapes.Add(new PolymorphismThirdPillarOfOOP.Shape {Width = 100, Height = 100, Type=ShapeType.Circle});
             shapes.Add(new PolymorphismThirdPillarOfOOP.Shape {Width = 100, Height = 30, Type=ShapeType.Rectangle});*/
@@ -258,5 +256,6 @@ namespace CSharpIntermediate
             var rectangle = new Rectangle();
             rectangle.Draw();
         }
+
     }
 }

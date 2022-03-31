@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace CSharpIntermediate.Exercises
+namespace CSharpIntermediate.InheritanceSecondPillarOfOOP.Exercises
 {
     public class Stack
     {
@@ -21,7 +19,7 @@ namespace CSharpIntermediate.Exercises
 
         public object Pop()
         {
-            if(_lists.Count<=0) throw  new InvalidOperationException("Empty list ");
+            if (_lists.Count <= 0) throw new InvalidOperationException("Empty list ");
 
             int index = _lists.Count - 1;
 
