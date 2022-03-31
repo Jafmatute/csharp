@@ -3,6 +3,7 @@ using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
 using CSharpIntermediate.InheritanceSecondPillarOfOOP;
 using CSharpIntermediate.PolymorphismThirdPillarOfOOP;
+using CSharpIntermediate.PolymorphismThirdPillarOfOOP.Exercises;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-            UseAbstractClassesMembers();
+            UseDbCommand();
         }
 
         private static void UsePoint()
@@ -257,5 +258,45 @@ namespace CSharpIntermediate
             rectangle.Draw();
         }
 
+        private static void UseDatabaseConnection()
+        {
+            try
+            {
+                var sqlserver = new SqlConnection("sqlconeect");
+                sqlserver.DbConnect();
+                sqlserver.DbCloseConnect();
+
+                var oracle = new OracleConnection("oracle");
+                oracle.DbConnect();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+
+            }
+
+        }
+
+        private static void UseDbCommand()
+        {
+            try
+            {
+                var sqlServer = new SqlConnection("connectivity");
+                var oracle = new OracleConnection("connectivity");
+
+
+                var command = new DbCommand(sqlServer, "select * from users");
+                command.Execute();
+
+                var command2 = new DbCommand(oracle, "Select - from customers");
+                command2.Execute();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+
+        }
     }
 }
