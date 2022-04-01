@@ -18,7 +18,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-            UseDbCommand();
+            UseInterfacesExtensibility();
         }
 
         private static void UsePoint()
@@ -273,11 +273,19 @@ namespace CSharpIntermediate
         }
 
         //Interfaces
-        private static void UseInterfaces()
+        private static void UseInterfacesTestability()
         {
             var orderProcessor = new OrderProcessor(new ShippingCalculator());
             var order = new Interfaces.Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
             orderProcessor.Process(order);
         }
+
+        private static void UseInterfacesExtensibility()
+        {
+            var dbMigration = new DbMigration(new FileLogger("D:\\log.txt"));
+            dbMigration.Migrate();
+        }
+
+
     }
 }
