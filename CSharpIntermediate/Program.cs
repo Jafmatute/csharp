@@ -3,6 +3,7 @@ using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
 using CSharpIntermediate.InheritanceSecondPillarOfOOP;
 using CSharpIntermediate.Interfaces;
+using CSharpIntermediate.Interfaces.Exercises;
 using CSharpIntermediate.PolymorphismThirdPillarOfOOP;
 using CSharpIntermediate.PolymorphismThirdPillarOfOOP.Exercises;
 using System;
@@ -18,7 +19,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-            UseInterfacesPolymorphism();
+            UseWorkflowEngine();
         }
 
         private static void UsePoint()
@@ -292,6 +293,18 @@ namespace CSharpIntermediate
             encoder.RegisterNotificationChannel(new MailNotificationChannel());
             encoder.RegisterNotificationChannel(new SmsNotificationChannel());
             encoder.Encode(new Video());
+        }
+
+        private static void UseWorkflowEngine()
+        {
+            var workflow = new WorkFlow();
+            workflow.Add(new UploadCloudStorage());
+            workflow.Add(new SendEmailCustomers());
+            workflow.Add(new CallWebServiceEncodingReady());
+            workflow.Add(new ChangeStatusVideo());
+
+            var engine = new WorkflowEngine();
+            engine.Run(workflow);
         }
     }
 }
