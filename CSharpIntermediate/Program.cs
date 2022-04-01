@@ -18,7 +18,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-            UseInterfacesExtensibility();
+            UseInterfacesPolymorphism();
         }
 
         private static void UsePoint()
@@ -286,6 +286,12 @@ namespace CSharpIntermediate
             dbMigration.Migrate();
         }
 
-
+        private static void UseInterfacesPolymorphism()
+        {
+            var encoder = new VideoEncoder();
+            encoder.RegisterNotificationChannel(new MailNotificationChannel());
+            encoder.RegisterNotificationChannel(new SmsNotificationChannel());
+            encoder.Encode(new Video());
+        }
     }
 }
