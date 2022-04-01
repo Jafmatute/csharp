@@ -2,6 +2,7 @@
 using CSharpIntermediate.AssociationBetweenClasses;
 using CSharpIntermediate.Classes;
 using CSharpIntermediate.InheritanceSecondPillarOfOOP;
+using CSharpIntermediate.Interfaces;
 using CSharpIntermediate.PolymorphismThirdPillarOfOOP;
 using CSharpIntermediate.PolymorphismThirdPillarOfOOP.Exercises;
 using System;
@@ -34,7 +35,6 @@ namespace CSharpIntermediate
             catch (Exception)
             {
                 Console.WriteLine("an unexpected error ocurred");
-
             }
         }
 
@@ -46,13 +46,12 @@ namespace CSharpIntermediate
             try
             {
                 var num = int.Parse("abc");
-
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-
             }
+
             //method 2
             int number;
             var result = int.TryParse("abc", out number);
@@ -64,8 +63,8 @@ namespace CSharpIntermediate
         private static void UseFields()
         {
             var customer = new Customer2(1);
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Classes.Order());
+            customer.Orders.Add(new Classes.Order());
             customer.Promote();
             Console.WriteLine(customer.Orders.Count);
         }
@@ -86,7 +85,6 @@ namespace CSharpIntermediate
 
         private static void UseExerciseStopWatch()
         {
-
             var stopwatch = new Exercises.Stopwatch();
             Console.WriteLine("Stopwatch");
             stopwatch.Start();
@@ -102,10 +100,8 @@ namespace CSharpIntermediate
                     Console.WriteLine("Duration: {0}", durationStopwatch.ToString("mm\\:ss\\.ff"));
 
                     Console.WriteLine("Press Enter to run the stopwatch one more line");
-
                 }
             }
-
         }
 
 
@@ -155,8 +151,6 @@ namespace CSharpIntermediate
 
             //Internal
             //Amazon.RateCalculator calculate = new RateCalculator();
-
-
         }
 
         private static void UseConstructorsInheritance()
@@ -179,10 +173,6 @@ namespace CSharpIntermediate
             //Down Casting
             Shape shape2 = new TextShape();
             TextShape text2 = (TextShape)shape;
-
-
-
-
         }
 
         private static void UseBoxingUnboxing()
@@ -195,16 +185,10 @@ namespace CSharpIntermediate
             var anotherList = new List<int>();
             var names = new List<string>();
             names.Add("ha");
-
-
-
-
-
         }
 
         private static void UseExerciseStack()
         {
-
             try
             {
                 var stack = new Stack();
@@ -219,16 +203,11 @@ namespace CSharpIntermediate
                 for (int i = min; i <= max; i++) Console.WriteLine(stack.Pop());
 
                 Console.ReadLine();
-
-
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-
             }
-
-
         }
 
         //Polymorphism Third Pillar of OOP
@@ -245,12 +224,10 @@ namespace CSharpIntermediate
 
             var canvas = new Canvas();
             canvas.DrawShapes(shapes);
-
         }
 
         private static void UseAbstractClassesMembers()
         {
-
             var circle = new Circle();
             circle.Draw();
 
@@ -272,9 +249,7 @@ namespace CSharpIntermediate
             catch (Exception e)
             {
                 Console.WriteLine(e);
-
             }
-
         }
 
         private static void UseDbCommand()
@@ -295,8 +270,14 @@ namespace CSharpIntermediate
             {
                 Console.WriteLine(e);
             }
+        }
 
-
+        //Interfaces
+        private static void UseInterfaces()
+        {
+            var orderProcessor = new OrderProcessor(new ShippingCalculator());
+            var order = new Interfaces.Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
+            orderProcessor.Process(order);
         }
     }
 }
