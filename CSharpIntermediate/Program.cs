@@ -19,7 +19,7 @@ namespace CSharpIntermediate
     {
         private static void Main()
         {
-            UseWorkflowEngine();
+            UseExercisePosts();
         }
 
         private static void UsePoint()
@@ -106,24 +106,33 @@ namespace CSharpIntermediate
         }
 
 
-        /*private static void UseExercisePosts()
+        private static void UseExercisePosts()
         {
+            var post = new Post();
 
             while (true)
             {
-                var post = new Post();
+                Console.WriteLine("Enter 1 to vote for and or against");
+                Console.WriteLine("----------------------------------------------------------------------");
+                Console.WriteLine("Programming advance stackOverflow question?");
+                Console.WriteLine("-----------------------------------------------------------------------");
 
-                Console.WriteLine("Title");
-                string title = Console.ReadLine().Trim();
-                Console.WriteLine("Description");
-                string description = Console.ReadLine().Trim();
-            
+                var vote = Console.ReadLine();
 
-                post.Create(title, description);
+                if (String.IsNullOrEmpty(vote))
+                    break;
+
+                if (Convert.ToInt32(vote) == 1)
+                    post.Like(1);
+                else if (Convert.ToInt32(vote) == 0)
+                    post.RemoveLike(1);
+
+
+                Console.WriteLine(" count vote: {0}", post.GetVotes());
+
             }
-            
 
-        }*/
+        }
 
 
         // Association between Classes
