@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon", "Amazon\Amazon.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casting", "Casting\Casting.csproj", "{6977AFBF-A0B2-4394-8462-2D2373106CF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testability", "Testability\Testability.csproj", "{99193522-4324-48DF-BE26-E3B7FEEBE96B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testability", "Testability\Testability.csproj", "{99193522-4324-48DF-BE26-E3B7FEEBE96B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAdvanced", "CSharpAdvanced\CSharpAdvanced.csproj", "{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{99193522-4324-48DF-BE26-E3B7FEEBE96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99193522-4324-48DF-BE26-E3B7FEEBE96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99193522-4324-48DF-BE26-E3B7FEEBE96B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
