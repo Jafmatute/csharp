@@ -1,6 +1,7 @@
 ﻿using CSharpAdvanced.Delegate;
-using CSharpAdvanced.Generics;
+using CSharpAdvanced.LambdaExpressions;
 using System;
+using Book = CSharpAdvanced.Generics.Book;
 
 namespace CSharpAdvanced
 {
@@ -8,7 +9,7 @@ namespace CSharpAdvanced
     {
         static void Main(string[] args)
         {
-            UseDelegation();
+            UseLambdaExpressions();
         }
 
         private static void UseGenerics()
@@ -50,5 +51,23 @@ namespace CSharpAdvanced
 
             processor.Processor("photo.jpg", filterHandler);
         }
+
+        private static void UseLambdaExpressions()
+        {
+            var books = new BookRepository().GetBooks();
+            var cheapAll = books.FindAll(b => b.Price < 10);
+
+            foreach (var book in cheapAll)
+            {
+                Console.WriteLine("Title: {0} Price: {1}", book.Title, book.Price);
+            }
+        }
+
+
+        static bool IsCheaperThan10Dollars(LambdaExpressions.Book book)
+        {
+            return book.Price < 10;
+        }
+
     }
 }
