@@ -1,4 +1,5 @@
-﻿using CSharpAdvanced.Generics;
+﻿using CSharpAdvanced.Delegate;
+using CSharpAdvanced.Generics;
 using System;
 
 namespace CSharpAdvanced
@@ -7,7 +8,7 @@ namespace CSharpAdvanced
     {
         static void Main(string[] args)
         {
-            UseGenerics();
+            UseDelegation();
         }
 
         private static void UseGenerics()
@@ -32,6 +33,22 @@ namespace CSharpAdvanced
             var number = new Generics.Nullable<int>();
             Console.WriteLine(" Has Value ? " + number.HasValue);
             Console.WriteLine("Value " + number.GetValueOrDefault());
+        }
+
+        private static void UseDelegation()
+        {
+            //var processor = new PhotoProcessor();
+            //processor.Processor("photo.jpg");
+
+            var processor = new PhotoProcessor();
+            var filters = new PhotoFilters();
+            Action<Photo> filterHandler = filters.ApplyBrightness;
+            filterHandler += filters.ApplyContrast;
+
+            //PhotoProcessor.PhotoFilterHandler filterHandler = filters.ApplyBrightness;
+            //filterHandler += filters.ApplyContrast;
+
+            processor.Processor("photo.jpg", filterHandler);
         }
     }
 }
