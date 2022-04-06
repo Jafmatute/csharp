@@ -1,4 +1,5 @@
 ﻿using CSharpAdvanced.Delegate;
+using CSharpAdvanced.Events;
 using CSharpAdvanced.LambdaExpressions;
 using System;
 using Book = CSharpAdvanced.Generics.Book;
@@ -9,7 +10,7 @@ namespace CSharpAdvanced
     {
         static void Main(string[] args)
         {
-            UseLambdaExpressions();
+            UseEventsDelegations();
         }
 
         private static void UseGenerics()
@@ -67,6 +68,18 @@ namespace CSharpAdvanced
         static bool IsCheaperThan10Dollars(LambdaExpressions.Book book)
         {
             return book.Price < 10;
+        }
+
+        static void UseEventsDelegations()
+        {
+            var video = new Video() { Title = "video 1" };
+            var videoEncoder = new VideoEncoder(); //publisher
+            var mailService = new MailService(); //subscribe
+            var messageService = new MessageService(); //subscribe
+
+            videoEncoder.VideoEncoded += mailService.OnVideoEncoded;
+            videoEncoder.VideoEncoded += messageService.OnVideoEncoded;
+            videoEncoder.Encode(video);
         }
 
     }
