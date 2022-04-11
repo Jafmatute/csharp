@@ -1,5 +1,6 @@
 ﻿using CSharpAdvanced.Delegate;
 using CSharpAdvanced.Events;
+using CSharpAdvanced.ExtensionMethods;
 using CSharpAdvanced.LambdaExpressions;
 using System;
 using Book = CSharpAdvanced.Generics.Book;
@@ -10,7 +11,7 @@ namespace CSharpAdvanced
     {
         static void Main(string[] args)
         {
-            UseEventsDelegations();
+            UseExtensionMethods();
         }
 
         private static void UseGenerics()
@@ -80,6 +81,14 @@ namespace CSharpAdvanced
             videoEncoder.VideoEncoded += mailService.OnVideoEncoded;
             videoEncoder.VideoEncoded += messageService.OnVideoEncoded;
             videoEncoder.Encode(video);
+        }
+
+        static void UseExtensionMethods()
+        {
+            string post = "this is supposed to be a very long blog post blah blah blah blah.....";
+            var shortenedPost = post.Shorten(5);
+
+            Console.WriteLine(shortenedPost);
         }
 
     }
