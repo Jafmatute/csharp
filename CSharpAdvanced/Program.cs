@@ -12,7 +12,7 @@ namespace CSharpAdvanced
     {
         static void Main(string[] args)
         {
-            UseLinq();
+            UseNullableTypes();
         }
 
         private static void UseGenerics()
@@ -155,6 +155,13 @@ namespace CSharpAdvanced
             var total = books.Sum(b => b.Price);
             Console.WriteLine("{0}, {1}", max, min);
             Console.WriteLine("sum: {0}", total);
+        }
+
+        static void UseNullableTypes()
+        {
+            var types = new NullableTypes.NullableTypes();
+            types.Main();
+
         }
 
     }
