@@ -12,7 +12,7 @@ namespace CSharpAdvanced
     {
         static void Main(string[] args)
         {
-            UseNullableTypes();
+            UseDynamic();
         }
 
         private static void UseGenerics()
@@ -162,6 +162,12 @@ namespace CSharpAdvanced
             var types = new NullableTypes.NullableTypes();
             types.Main();
 
+        }
+
+        static void UseDynamic()
+        {
+            var dinamic = new Dynamic.Dynamic();
+            dinamic.Main();
         }
 
     }
