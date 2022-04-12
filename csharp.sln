@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casting", "Casting\Casting.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testability", "Testability\Testability.csproj", "{99193522-4324-48DF-BE26-E3B7FEEBE96B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAdvanced", "CSharpAdvanced\CSharpAdvanced.csproj", "{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpAdvanced", "CSharpAdvanced\CSharpAdvanced.csproj", "{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async\Async.csproj", "{F3BD25A8-E1CA-42C4-ABC4-7AA0B85DB51A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B662FCAD-DDB6-4D8E-8273-7EC22224B09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3BD25A8-E1CA-42C4-ABC4-7AA0B85DB51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3BD25A8-E1CA-42C4-ABC4-7AA0B85DB51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3BD25A8-E1CA-42C4-ABC4-7AA0B85DB51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3BD25A8-E1CA-42C4-ABC4-7AA0B85DB51A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
