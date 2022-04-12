@@ -1,10 +1,12 @@
 ﻿using CSharpAdvanced.Delegate;
 using CSharpAdvanced.Events;
+using CSharpAdvanced.ExceptionHandling;
 using CSharpAdvanced.ExtensionMethods;
 using CSharpAdvanced.LambdaExpressions;
 using System;
 using System.Linq;
 using Book = CSharpAdvanced.Generics.Book;
+using Video = CSharpAdvanced.Events.Video;
 
 namespace CSharpAdvanced
 {
@@ -12,7 +14,7 @@ namespace CSharpAdvanced
     {
         static void Main(string[] args)
         {
-            UseDynamic();
+            UseExceptionHandling();
         }
 
         private static void UseGenerics()
@@ -170,5 +172,68 @@ namespace CSharpAdvanced
             dinamic.Main();
         }
 
+        static void UseExceptionHandling()
+        {
+            //try
+            //{
+            //    var calculator = new Calculator();
+            //    var result = calculator.Divide(5, 0);
+            //}
+            //catch (DivideByZeroException ex)
+            //{
+            //    Console.WriteLine("You cannot divide by 0.");
+            //}
+            //catch (ArithmeticException ex)
+            //{
+
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine("sorry, an unexpected error occurred.");
+            //}
+
+            //Finally
+            //var streamReader = new StreamReader(@"D:\log.txt");
+
+            //try
+            //{
+            //    var content = streamReader.ReadToEnd();
+            //    throw new Exception("oppps");
+
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine("sorry, an unexpected error occurred.");
+
+            //}
+            //finally
+            //{
+            //    streamReader.Dispose();
+            //}
+
+            //Using
+            //try
+            //{
+            //    using var streamReader = new StreamReader(@"D:\log.txt");
+            //    var content = streamReader.ReadToEnd();
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine("sorry, an unexpected error occurred.");
+            //}
+
+            try
+            {
+                var api = new YoutubeApi();
+                var videos = api.GetVideos("Josue");
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+        }
     }
 }
